@@ -58,9 +58,3 @@ Failed Login Attempts:
 3 203.0.113.50
 ===================================================
 ```
-
-## 📢 Contributing
-Feel free to **fork** the repo, improve the script, and submit a pull request!
-
-## 📄 License
-This script is **open-source** and licensed under the **MIT License**.
