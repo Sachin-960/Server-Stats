@@ -15,7 +15,7 @@ A **lightweight yet powerful** Bash script to monitor **CPU, Memory, Disk, Load 
 ## 🚀 Installation
 Clone the repository or download the script:
 ```sh
-wget https://your-repo-url/server_stats.sh
+git clone https://github.com/Sachin-960/Server-Stats
 chmod +x server_stats.sh
 ```
 
