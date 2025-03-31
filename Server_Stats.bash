@@ -28,7 +28,7 @@ os_version() {
         echo -e "OS Version: Unknown \n"
     fi
 }
-uptime() {
+server_uptime() {
     echo -e "Uptime: $(uptime -p) \n"
 }
 load_average() {
@@ -51,7 +51,7 @@ disk_usage
 top5_cpu
 top5_mem
 os_version
-uptime
+server_uptime
 load_average
 users_logged_in
 failed_login
