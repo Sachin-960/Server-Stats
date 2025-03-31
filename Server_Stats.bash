@@ -18,7 +18,15 @@ top5_mem() {
     echo -e "\n"
 }
 os_version() {
-    echo -e "OS Version: $(lsb_release -d | cut -f2) \n"
+    if [ -f /etc/os-release ]; then
+        echo -e "OS Version: $(grep -w PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '\"') \n"
+    elif [ -f /etc/redhat-release ]; then
+        echo -e "OS Version: $(cat /etc/redhat-release) \n"
+    elif command -v lsb_release &> /dev/null; then
+        echo -e "OS Version: $(lsb_release -d | cut -f2) \n"
+    else
+        echo -e "OS Version: Unknown \n"
+    fi
 }
 uptime() {
     echo -e "Uptime: $(uptime -p) \n"
